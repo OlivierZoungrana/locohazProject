@@ -21,7 +21,8 @@ def main():
 
 admin = Admin('olivier', 'zoungrana')
 admin1 = admin
-admin1.add_admin()
+#admin1.add_admin()
+admin1.Add_article_inStock()
 
 
 

@@ -1,4 +1,3 @@
-
 articles = {
     "tonnelles": 10,
     "Chaises": 100
@@ -6,3 +5,6 @@ articles = {
 
 
 adminIdentifiants = [101, 102,103]
+
+
+

@@ -2,8 +2,8 @@ from .data import articles
 import pandas as pd
 import matplotlib.pyplot as plt
 
-prix_tonnelle = 50
-prix_chaise = 2
+PRIX_TONNELLE = 50
+PRIX_CHAISE = 2
 commande = {
     "name": [],
     "tonnelle": [],
@@ -12,9 +12,9 @@ commande = {
 }
 
 class Client:
-    def __init__(self, name, surname):
-        self.name = name
-        self.surname = surname
+    def __init__(self, *args):
+        self.name = args[0]
+        self.surname = args[1]
     def __repr__(self):
         return self.name + " " + self.surname
     def informationCustomers(self):
@@ -71,7 +71,7 @@ class Client:
         else:
             print("that product doesn't exist")
     def Total(self):
-       cout = (commande["tonnelle"][0] * prix_tonnelle )+ (commande["chaise"][0] * prix_chaise)
+       cout = (commande["tonnelle"][0] * PRIX_TONNELLE) + (commande["chaise"][0] * PRIX_CHAISE)
        commande["total"] += cout
        return
     def CreateDataframe(self):
